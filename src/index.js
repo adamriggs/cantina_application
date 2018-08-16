@@ -34,7 +34,6 @@ class App extends Component {
                 let keywords = this.state.keywords;
                 
                 if(value === keywords) {
-                    console.log(node);
                     this.filtered.push(node);
                 }
 
@@ -42,7 +41,6 @@ class App extends Component {
                     keywords = keywords.slice(1);
 
                     if(node.classNames && node.classNames.includes(keywords)) {
-                        console.log(node);
                         this.filtered.push(node);
                     }
                 }
@@ -51,7 +49,6 @@ class App extends Component {
                     keywords = keywords.slice(1);
 
                     if(node.identifier && node.identifier.includes(keywords)) {
-                        console.log(node);
                         this.filtered.push(node);
                     }
                 }
