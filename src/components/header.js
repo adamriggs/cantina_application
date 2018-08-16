@@ -1,31 +1,19 @@
-import React, { Component } from 'react';
-import '../css/styles.css';
+import React from 'react';
+import classes from '../css/styles.css';
 
-class Header extends Component {
+const Header = (props) => {
 
-    state = {
-        keywords: ''
-    }
+    return (
+        <header>
+            <div className={classes.logo}>Recursive Tree Parsing!</div>
+            <input 
+                type="text" 
+                onChange={props.keywords}
+            />
 
-    inputChangeHandler(event) {
-        this.setState({
-            keywords: event.target.value
-        });
-    }
+        </header>
+    )
 
-    render () {
-
-        return (
-            <header>
-                <div className="logo">Logo</div>
-                <input 
-                    type="text" 
-                    onChange={ (e)=> this.inputChangeHandler(e)}
-                />
-
-            </header>
-        )
-    }
 }
 
 export default Header;
